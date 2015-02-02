@@ -19,7 +19,7 @@ RUN apt-get -qq update
 ##############################################################################
 # Install system python & tools
 ##############################################################################
-RUN apt-get install -y memcached build-essential python-dev
+RUN apt-get install -y build-essential python-dev
 RUN apt-get install -y python python-pip vim  python-imaging wget python-software-properties
 RUN apt-get install -y python-setuptools git-core
 
@@ -43,7 +43,7 @@ RUN rm /etc/nginx/sites-enabled/default
 ##############################################################################
 # Install pip requirements
 ##############################################################################
-RUN pip install django Pillow psycopg2 gunicorn pylibmc
+RUN pip install django Pillow psycopg2 gunicorn
 
 ##############################################################################
 # Setup nginx
